@@ -1,0 +1,39 @@
+<html>
+<head>
+     <title>Rad.Co</title>
+
+    <!-- CONFIGURATION -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	
+    <!-- SCRIPTS  -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+	<script src="https://use.fontawesome.com/b79e087f0b.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- FONTS  -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div id="app" class="container-fluid page">
+		<div class="row">
+			<!-- SIDEBAR -->
+			<nav-component :filtered.sync="filtered" :filters.sync="filters" :unfiltered.sync="unfiltered"></nav-component>
+			<!-- ARTICLES -->
+			<catalogue-component :filtered.sync="filtered"></catalogue-component>
+		</div>
+	</div>
+	<script src="js/data.js"></script>
+	<script src="js/nav.js"></script>
+	<script src="js/catalogue.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

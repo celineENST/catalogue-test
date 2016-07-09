@@ -1,0 +1,45 @@
+@mixin circle-color($color) {
+	color: $color !important;
+}
+
+@mixin color-picker($color) {
+	background-color: $bg-color;
+	display: inline-block;
+	text-align: center;
+	width: $color-radius;
+	height: $color-radius;
+	padding: $color-padding;
+	border-radius: 50%;
+	border: $color-border solid $color;
+}
+
+.white {
+	@include circle-color($separator-color);
+}
+.grey {
+	@include circle-color($grey);
+}
+.blue {
+	@include circle-color($blue);
+}
+.green {
+	@include circle-color($green);
+}
+.pink {
+	@include circle-color($pink);
+}
+.red {
+	@include circle-color($red);
+}
+
+#nav {
+	.fa-circle, .fa-circle-thin, .uncircled {
+		@include color-picker($bg-color);
+	}
+
+	.fa-circle-thin:hover, .fa-circle:hover, .circled {
+		@include color-picker($grey);
+		text-decoration: none;
+		cursor: hand;
+	}
+}

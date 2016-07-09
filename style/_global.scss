@@ -1,0 +1,30 @@
+body {
+    font: $font-stack;
+    font-weight: $normal;
+    font-size: $regular-size !important;
+    color: $primary-color;
+}
+
+b {
+    font-weight: $semibold !important;
+    font-size: $regular-size !important;
+}
+
+.page {
+	padding: $padding-page !important;
+}
+
+#nav {
+	// Get rid of flickering in webkit-powered devices by pushing CSS anim  onto hardware acceleration
+	-webkit-transform: translate3d(0, 0, 0); 
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+}
+
+.underlined {
+	text-decoration: underline;
+}
+
+.no-underlined {
+	text-decoration: none;
+}
